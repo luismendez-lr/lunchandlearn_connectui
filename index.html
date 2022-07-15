@@ -1,40 +1,139 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+    <title>Connect UI</title>
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/night.css">
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h3>Connect UI</h3>
+          <p><img src="assets/connectui.png" alt="Connect App Screenshot"></p>
+        </section>
+        <section>
+          <section>
+            Connect is a client-facing web application that enables several use cases.
+            <p>Co-owned with AX</p>
+          </section>
+          <section>
+            Ingestion focuses on:
+            </br>
+            <img src="assets/datain.png" alt="Data In: File Upload and Files">
+          </section>
+        </section>
+        <section>
+          <p>
+            App: <a href="https://connect.liveramp.com" target="_blank">https://connect.liveramp.com</a>
+            <br/>
+            Repository: <a href="https://github.com/LiveRamp/connect" target="_blank">https://github.com/LiveRamp/connect</a>
+            <br/>
+            Documentation: <a href="https://docs.liveramp.com/connect/index.html?lang=en" target="_blank">https://docs.liveramp.com/connect/index.html?lang=en</a>
+          </p>
+        </section>
+        <section>
+          <table>
+            <tr>
+              <th>Tech</th>
+              <th>Version</th>
+            </tr>
+            <tr>
+              <td>Ruby</td>
+              <td>2.6.3</td>
+            </tr>
+            <tr>
+              <td>Ruby On Rails</td>
+              <td>5.0</td>
+            </tr>
+            <tr>
+              <td>mySQL2</td>
+              <td>0.4.10</td>
+            </tr>
+            <tr>
+              <td>Redis</td>
+              <td>4.2.2</td>
+            </tr>
+            <tr>
+              <td>Node</td>
+              <td>12.18.3</td>
+            </tr>
+            <tr>
+              <td>React</td>
+              <td>17.x</td>
+            </tr>
+            <tr>
+              <td>Typescript</td>
+              <td>4.2.4</td>
+            </tr>
+          </table>
+        </section>
+        <section>
+          <a href="https://connect.liveramp.com/simple_onboard?customer_id=481218" target="_blank">File Upload</a>
+          <br/>
+          <img src="assets/uploadfile.png" alt="File Upload">
+        </section>
+        <section>
+          <section>
+            <a href="https://connect.liveramp.com/file_tracking?customer_id=481218" target="_blank">Files / File Tracking</a>
+            <p>New Ownership by Ingestion</p>
+            <br/>
+            <img src="assets/files.png" alt="File Tracking">
+          </section>
+          <section>
+            <img src="assets/filedetail.png" alt="File Detail">
+          </section>
+        </section>
+        <section>
+          Motif 
+          <br/>
+          <a href="https://motif.nexus.liveramp.com/" target="_blank">https://motif.nexus.liveramp.com/</a>
+          <br/>
+          <img src="assets/motif.png" alt="Motif">
+        </section>
+        <section>
+          <p>Ruby (Server) -> App / React (Client)</p>
+          <p>React Request Data -> Endpoint (Ruby)</p>
+          <p>Controller (Ruby) -> Service / API / DB</p>
+          <p>Endpoint Response (Ruby) -> Client (React)</p>
+          <p>React rerenders with requested data</p>
+        </section>
+        <section>
+          <h3>
+          Add-limited-db
+          </h3>
+          <br/>
+          No Database
+          <br/>
+          All requests mocked
+          <br/><br/>
+          <a href="https://github.com/LiveRamp/connect/tree/Add-limited-db" target="_blank">https://github.com/LiveRamp/connect/tree/Add-limited-db</a>
+        </section>
+      </div>
+    </div>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+      });
+    </script>
+  </body>
 </html>
